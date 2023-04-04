@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'firstApp';
+  formatSlider(value : number){
+    if(value%60 < 10) return ((value - value%60) / 60) +':0' + (value%60);
+    return ((value - value%60) / 60) +':' + (value%60);
+  }
 }
+
+
